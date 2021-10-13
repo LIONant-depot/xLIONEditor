@@ -18,12 +18,32 @@ powershell write-host -fore White ----------------------------------------------
 echo.
 
 rem ------------------------------------------------------------
+rem XECS
+rem ------------------------------------------------------------
+:XECS
+rmdir "../dependencies/xECS" /S /Q
+git clone https://github.com/LIONant-depot/xECS.git "../dependencies/xECS"
+if %ERRORLEVEL% GEQ 1 goto :ERROR
+
+rem ------------------------------------------------------------
 rem XGPU
 rem ------------------------------------------------------------
-:XGPU
+:XECS
 rmdir "../dependencies/xGPU" /S /Q
-git clone https://github.com/LIONant-depot/xECS.git "../dependencies/xGPU"
+git clone https://github.com/LIONant-depot/xGPU.git "../dependencies/xGPU"
 if %ERRORLEVEL% GEQ 1 goto :ERROR
+
+rem ------------------------------------------------------------
+rem XCORE
+rem ------------------------------------------------------------
+rmdir "../dependencies/xcore" /S /Q
+git clone https://gitlab.com/LIONant/xcore.git "../dependencies/xCore"
+if %ERRORLEVEL% GEQ 1 goto :PAUSE
+cd ../dependencies/xcore/builds
+call UpdateDependencies.bat "return"
+if %ERRORLEVEL% GEQ 1 goto :PAUSE
+cd /d %XLION_EDITOR%
+
 
 
 :DONE
