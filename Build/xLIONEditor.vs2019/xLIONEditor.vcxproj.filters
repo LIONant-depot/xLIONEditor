@@ -345,5 +345,6 @@
     <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_ui_inline.h">
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\xlioned_main_document.h" />
   </ItemGroup>
 </Project>

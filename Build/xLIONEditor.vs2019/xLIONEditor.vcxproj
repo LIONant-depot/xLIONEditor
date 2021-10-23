@@ -231,6 +231,7 @@
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_ui.h" />
     <ClInclude Include="..\..\src\Settings\PropertyConfig.h" />
     <ClInclude Include="..\..\src\Settings\xcore_user_settings.h" />
+    <ClInclude Include="..\..\src\xlioned_main_document.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
