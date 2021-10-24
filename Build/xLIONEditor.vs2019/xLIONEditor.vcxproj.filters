@@ -12,22 +12,22 @@
       <Filter>Dependencies\xCore</Filter>
     </ClCompile>
     <ClCompile Include="..\..\dependencies\xEditor\dependencies\xcore\dependencies\tracy\imgui\imgui.cpp">
-      <Filter>Dependencies\ImGui</Filter>
+      <Filter>Dependencies\xEditor\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\dependencies\xEditor\dependencies\xcore\dependencies\tracy\imgui\imgui_demo.cpp">
-      <Filter>Dependencies\ImGui</Filter>
+      <Filter>Dependencies\xEditor\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\dependencies\xEditor\dependencies\xcore\dependencies\tracy\imgui\imgui_draw.cpp">
-      <Filter>Dependencies\ImGui</Filter>
+      <Filter>Dependencies\xEditor\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\dependencies\xEditor\dependencies\xcore\dependencies\tracy\imgui\imgui_tables.cpp">
-      <Filter>Dependencies\ImGui</Filter>
+      <Filter>Dependencies\xEditor\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\dependencies\xEditor\dependencies\xcore\dependencies\tracy\imgui\imgui_widgets.cpp">
-      <Filter>Dependencies\ImGui</Filter>
+      <Filter>Dependencies\xEditor\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\dependencies\xEditor\dependencies\xGPU\Src\xGPU.cpp">
-      <Filter>Dependencies\xGPU</Filter>
+      <Filter>Dependencies\xEditor\xGPU</Filter>
     </ClCompile>
     <ClCompile Include="..\..\dependencies\xEditor\Src\xeditor.cpp">
       <Filter>Dependencies\xEditor</Filter>
@@ -44,10 +44,10 @@
     <ClCompile Include="..\..\dependencies\xEditor\Src\Details\xeditor_ui.cpp">
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_frame.cpp">
+    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_frame_main.cpp">
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_tab.cpp">
+    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_frame_base.cpp">
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\Editors\LogED\xlioned_loged.cpp">
@@ -64,15 +64,6 @@
     <Filter Include="Dependencies\xCore">
       <UniqueIdentifier>{2e26bd03-0f98-4422-80c0-ad9513ccf2b2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Dependencies\xGPU">
-      <UniqueIdentifier>{bf0d8b2c-dc84-4f94-9b47-616a21ba9d23}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Dependencies\ImGui">
-      <UniqueIdentifier>{ece281ac-08de-4882-aa46-e0947e4b3bc3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Dependencies\xGPU\Tools">
-      <UniqueIdentifier>{c5a57c1e-c82c-4b64-bf88-c2ba3abda08e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Dependencies\xEditor">
       <UniqueIdentifier>{f94864f3-0282-4acc-b840-8fa6c08592ed}</UniqueIdentifier>
     </Filter>
@@ -84,6 +75,18 @@
     </Filter>
     <Filter Include="Editors\LogED">
       <UniqueIdentifier>{5dd8e31d-7462-4be8-a5fc-1f59bc7a9b7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\xEditor\xGPU">
+      <UniqueIdentifier>{bf0d8b2c-dc84-4f94-9b47-616a21ba9d23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\xEditor\xGPU\Tools">
+      <UniqueIdentifier>{c5a57c1e-c82c-4b64-bf88-c2ba3abda08e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\xEditor\ImGui">
+      <UniqueIdentifier>{ece281ac-08de-4882-aa46-e0947e4b3bc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editors\SceneED">
+      <UniqueIdentifier>{4687585e-a6ff-4c65-96a1-0e2aa15e3cf8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -250,22 +253,22 @@
       <Filter>Dependencies\xCore</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xcore\dependencies\tracy\imgui\imconfig.h">
-      <Filter>Dependencies\ImGui</Filter>
+      <Filter>Dependencies\xEditor\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xcore\dependencies\tracy\imgui\imgui.h">
-      <Filter>Dependencies\ImGui</Filter>
+      <Filter>Dependencies\xEditor\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xcore\dependencies\tracy\imgui\imgui_internal.h">
-      <Filter>Dependencies\ImGui</Filter>
+      <Filter>Dependencies\xEditor\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xcore\dependencies\tracy\imgui\imstb_rectpack.h">
-      <Filter>Dependencies\ImGui</Filter>
+      <Filter>Dependencies\xEditor\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xcore\dependencies\tracy\imgui\imstb_textedit.h">
-      <Filter>Dependencies\ImGui</Filter>
+      <Filter>Dependencies\xEditor\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xcore\dependencies\tracy\imgui\imstb_truetype.h">
-      <Filter>Dependencies\ImGui</Filter>
+      <Filter>Dependencies\xEditor\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_document_main.h">
       <Filter>Dependencies\xEditor</Filter>
@@ -273,67 +276,67 @@
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_document_base.h">
       <Filter>Dependencies\xEditor</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_frame.h">
+    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_frame_main.h">
       <Filter>Dependencies\xEditor</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_ui.h">
       <Filter>Dependencies\xEditor</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Src\xGPU.h">
-      <Filter>Dependencies\xGPU</Filter>
+      <Filter>Dependencies\xEditor\xGPU</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Src\xgpu_buffer.h">
-      <Filter>Dependencies\xGPU</Filter>
+      <Filter>Dependencies\xEditor\xGPU</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Src\xgpu_cmd_buffer.h">
-      <Filter>Dependencies\xGPU</Filter>
+      <Filter>Dependencies\xEditor\xGPU</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Src\xgpu_device.h">
-      <Filter>Dependencies\xGPU</Filter>
+      <Filter>Dependencies\xEditor\xGPU</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Src\xgpu_instance.h">
-      <Filter>Dependencies\xGPU</Filter>
+      <Filter>Dependencies\xEditor\xGPU</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Src\xgpu_keyboard.h">
-      <Filter>Dependencies\xGPU</Filter>
+      <Filter>Dependencies\xEditor\xGPU</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Src\xgpu_mouse.h">
-      <Filter>Dependencies\xGPU</Filter>
+      <Filter>Dependencies\xEditor\xGPU</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Src\xgpu_pipeline.h">
-      <Filter>Dependencies\xGPU</Filter>
+      <Filter>Dependencies\xEditor\xGPU</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Src\xgpu_pipeline_instance.h">
-      <Filter>Dependencies\xGPU</Filter>
+      <Filter>Dependencies\xEditor\xGPU</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Src\xgpu_shader.h">
-      <Filter>Dependencies\xGPU</Filter>
+      <Filter>Dependencies\xEditor\xGPU</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Src\xgpu_texture.h">
-      <Filter>Dependencies\xGPU</Filter>
+      <Filter>Dependencies\xEditor\xGPU</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Src\xgpu_vertex_descriptor.h">
-      <Filter>Dependencies\xGPU</Filter>
+      <Filter>Dependencies\xEditor\xGPU</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Src\xgpu_window.h">
-      <Filter>Dependencies\xGPU</Filter>
+      <Filter>Dependencies\xEditor\xGPU</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Tools\xgpu_basis_universal_texture_loader.h">
-      <Filter>Dependencies\xGPU\Tools</Filter>
+      <Filter>Dependencies\xEditor\xGPU\Tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Tools\xgpu_imgui_breach.h">
-      <Filter>Dependencies\xGPU\Tools</Filter>
+      <Filter>Dependencies\xEditor\xGPU\Tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Tools\xgpu_view.h">
-      <Filter>Dependencies\xGPU\Tools</Filter>
+      <Filter>Dependencies\xEditor\xGPU\Tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Tools\xgpu_view_inline.h">
-      <Filter>Dependencies\xGPU\Tools</Filter>
+      <Filter>Dependencies\xEditor\xGPU\Tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Tools\xgpu_xcore_bitmap_helpers.h">
-      <Filter>Dependencies\xGPU\Tools</Filter>
+      <Filter>Dependencies\xEditor\xGPU\Tools</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_tab.h">
+    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_frame_base.h">
       <Filter>Dependencies\xEditor</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_command_inline.h">
@@ -345,10 +348,10 @@
     <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_document_main_inline.h">
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_frame_inline.h">
+    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_frame_main_inline.h">
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_tab_inline.h">
+    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_frame_base_inline.h">
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_ui_inline.h">
@@ -361,7 +364,7 @@
     <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_document.h">
       <Filter>Editors\LogED</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_tab.h">
+    <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_frame.h">
       <Filter>Editors\LogED</Filter>
     </ClInclude>
   </ItemGroup>

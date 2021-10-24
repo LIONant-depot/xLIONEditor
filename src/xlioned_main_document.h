@@ -12,7 +12,7 @@ namespace xlioned::document
 
         constexpr static auto           class_name_v = xcore::string::constant("xLIONEditor/Documents/Main");
 
-        main(xeditor::frame::base& Frame) noexcept : xeditor::document::main(class_name_v, Frame) {}
+        main(xeditor::frame::main& Frame) noexcept : xeditor::document::main(class_name_v, Frame) {}
 
     public:
 

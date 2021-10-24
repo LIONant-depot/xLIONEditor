@@ -108,11 +108,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_frame.cpp">
+    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_frame_main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_tab.cpp">
+    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_frame_base.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -211,11 +211,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_frame_inline.h">
+    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_frame_main_inline.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_tab_inline.h">
+    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_frame_base_inline.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClInclude>
@@ -227,12 +227,12 @@
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_command.h" />
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_document_base.h" />
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_document_main.h" />
-    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_frame.h" />
-    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_tab.h" />
+    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_frame_main.h" />
+    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_frame_base.h" />
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_ui.h" />
     <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged.h" />
     <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_document.h" />
-    <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_tab.h" />
+    <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_frame.h" />
     <ClInclude Include="..\..\src\Settings\PropertyConfig.h" />
     <ClInclude Include="..\..\src\Settings\xcore_user_settings.h" />
     <ClInclude Include="..\..\src\xlioned_main_document.h" />

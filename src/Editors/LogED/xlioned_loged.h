@@ -5,6 +5,6 @@
 #include "../../dependencies/xeditor/Src/xeditor.h"
 
 #include "xlioned_loged_document.h"
-#include "xlioned_loged_tab.h"
+#include "xlioned_loged_frame.h"
 
 #endif

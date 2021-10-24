@@ -12,7 +12,7 @@ struct editor
     xgpu::instance                              m_Instance;
     xgpu::device                                m_Device;
     xgpu::window                                m_MainWindow;
-    std::unique_ptr<xeditor::frame::base>       m_MainFrame;
+    std::unique_ptr<xeditor::frame::main>       m_MainFrame;
     std::unique_ptr<xlioned::document::main>    m_MainDocument;
     inline static xcore::log::channel*          s_pGlobalAccessLogChannel;
 
@@ -45,7 +45,7 @@ struct editor
         //
         // Create main doc
         //
-        m_MainFrame    = std::make_unique<xeditor::frame::base>(m_MainWindow);
+        m_MainFrame    = std::make_unique<xeditor::frame::main>(m_MainWindow);
         m_MainDocument = std::make_unique<xlioned::document::main>(*m_MainFrame);
 
         return 0;
