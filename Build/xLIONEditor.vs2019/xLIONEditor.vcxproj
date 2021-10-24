@@ -121,6 +121,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\dependencies\xEditor\Src\xeditor.cpp" />
+    <ClCompile Include="..\..\src\Editors\LogED\xlioned_loged.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +230,9 @@
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_frame.h" />
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_tab.h" />
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_ui.h" />
+    <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged.h" />
+    <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_document.h" />
+    <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_tab.h" />
     <ClInclude Include="..\..\src\Settings\PropertyConfig.h" />
     <ClInclude Include="..\..\src\Settings\xcore_user_settings.h" />
     <ClInclude Include="..\..\src\xlioned_main_document.h" />

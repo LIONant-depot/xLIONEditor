@@ -26,7 +26,7 @@ struct editor
             xgpu::instance::setup Setup
             { .m_pAppName           = "xLionEditor"
             , .m_bDebugMode         = true
-            , .m_bEnableRenderDoc   = true
+            , .m_bEnableRenderDoc   = false
             , .m_Driver             = xgpu::instance::setup::driver::VULKAN
             , .m_pLogErrorFunc      = [](std::string_view View){ XLOG_CHANNEL_ERROR( *s_pGlobalAccessLogChannel, "%s", View.data() ); }
             , .m_pLogWarning        = [](std::string_view View){ XLOG_CHANNEL_WARNING( *s_pGlobalAccessLogChannel, "%s", View.data()); }
@@ -63,6 +63,9 @@ int main()
     //
     auto Editor = std::make_unique<editor>();
     if( auto Err = Editor->Init(); Err ) return Err;
+
+    if( auto Err = Editor->m_MainFrame->CreateTab( "Log" ); Err ) 
+        return -1;
 
     //
     // Main loop

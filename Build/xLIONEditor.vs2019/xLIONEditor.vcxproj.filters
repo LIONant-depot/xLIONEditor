@@ -50,6 +50,9 @@
     <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_tab.cpp">
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Editors\LogED\xlioned_loged.cpp">
+      <Filter>Editors\LogED</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Settings">
@@ -75,6 +78,12 @@
     </Filter>
     <Filter Include="Dependencies\xEditor\Details">
       <UniqueIdentifier>{9cd4481e-e90b-45da-b9b1-4fdd2749c923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editors">
+      <UniqueIdentifier>{775347e1-ca0f-48eb-8e0d-d90a1031e53e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editors\LogED">
+      <UniqueIdentifier>{5dd8e31d-7462-4be8-a5fc-1f59bc7a9b7c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -346,5 +355,14 @@
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\xlioned_main_document.h" />
+    <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged.h">
+      <Filter>Editors\LogED</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_document.h">
+      <Filter>Editors\LogED</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_tab.h">
+      <Filter>Editors\LogED</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
