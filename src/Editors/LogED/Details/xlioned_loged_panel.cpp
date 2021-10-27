@@ -1,28 +1,28 @@
 namespace xlioned::loged {
 
-static const xeditor::frame::details::type_harness<frame> s_Type
-{ frame::class_name_v
-, xeditor::frame::type::flags{ .m_bDisplayOnEmptyProject = true }
+static const xeditor::panel::details::type_harness<panel> s_Type
+{ panel::class_name_v
+, xeditor::panel::type::flags{ .m_bDisplayOnEmptyProject = true }
 };    
 
 //-------------------------------------------------------------------------------------------
 
-const xeditor::frame::type& frame::getType( void ) 
+const xeditor::panel::type& panel::getType( void )
 { 
     return s_Type;  
 }
 
 //-------------------------------------------------------------------------------------------
 
-frame::frame( xcore::string::constant<char> Str, xeditor::frame::instance_guid Guid, xeditor::frame::main& MainFrame )
-    : xeditor::frame::base{ Str, Guid, MainFrame }
+panel::panel( xcore::string::constant<char> Str, xeditor::panel::instance_guid Guid, xeditor::frame& MainFrame )
+    : xeditor::panel::base{ Str, Guid, MainFrame }
     , m_LogDoc{ MainFrame.getMainDoc().getSubDocument<document>() }
 {
 }
 
 //-------------------------------------------------------------------------------------------
 
-void frame::onRender( void )
+void panel::onRender( void )
 {
     open_popup WhichPopupToOpen = open_popup::NONE;
 

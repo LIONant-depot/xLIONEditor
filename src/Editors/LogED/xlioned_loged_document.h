@@ -20,7 +20,7 @@ namespace xlioned::loged
 
     public:
 
-                                                        document            ( xcore::string::constant<char> Str, xeditor::document::main& MainDoc )            noexcept;
+                                                        document            ( xcore::string::constant<char> Str, xeditor::document::main& MainDoc ) noexcept;
                                 void                    Clear               ( void )                                                                noexcept;
                                 auto&                   getLockedKeyData    ( void )                                                        const   noexcept        { return m_LockedKeyData; }
         virtual       const xeditor::document::type&    getType             ( void )                                                        const   noexcept override;

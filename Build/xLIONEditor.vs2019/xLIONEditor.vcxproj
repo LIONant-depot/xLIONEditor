@@ -108,11 +108,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_frame_main.cpp">
+    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_frame.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_frame_base.cpp">
+    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_panel.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -122,9 +122,26 @@
     </ClCompile>
     <ClCompile Include="..\..\dependencies\xEditor\Src\xeditor.cpp" />
     <ClCompile Include="..\..\src\Editors\LogED\xlioned_loged.cpp" />
+    <ClCompile Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_archetype.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_archetype_mgr.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_component.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_component_mgr.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_event.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_event_mgr.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_game_mgr.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_pool.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_query.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_query_iterator.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_settings.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_system.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_system_mgr.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_tools.h" />
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_tools_bits.h" />
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xcore\dependencies\tracy\imgui\imconfig.h" />
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xcore\dependencies\tracy\imgui\imgui.h" />
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xcore\dependencies\tracy\imgui\imgui_internal.h" />
@@ -211,11 +228,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_frame_main_inline.h">
+    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_frame_inline.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_frame_base_inline.h">
+    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_panel_inline.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClInclude>
@@ -227,12 +244,17 @@
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_command.h" />
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_document_base.h" />
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_document_main.h" />
-    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_frame_main.h" />
-    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_frame_base.h" />
+    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_frame.h" />
+    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_panel.h" />
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_ui.h" />
     <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged.h" />
     <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_document.h" />
-    <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_frame.h" />
+    <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_panel.h" />
+    <ClInclude Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer.h" />
+    <ClInclude Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer_document.h" />
+    <ClInclude Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer_frame.h" />
+    <ClInclude Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer_magic_folders.h" />
+    <ClInclude Include="..\..\src\Editors\SceneED\xlioned_sceneed.h" />
     <ClInclude Include="..\..\src\Settings\PropertyConfig.h" />
     <ClInclude Include="..\..\src\Settings\xcore_user_settings.h" />
     <ClInclude Include="..\..\src\xlioned_main_document.h" />

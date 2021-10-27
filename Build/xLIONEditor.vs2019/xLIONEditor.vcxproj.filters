@@ -44,14 +44,17 @@
     <ClCompile Include="..\..\dependencies\xEditor\Src\Details\xeditor_ui.cpp">
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_frame_main.cpp">
+    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_frame.cpp">
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_frame_base.cpp">
+    <ClCompile Include="..\..\dependencies\xeditor\Src\Details\xeditor_panel.cpp">
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\Editors\LogED\xlioned_loged.cpp">
       <Filter>Editors\LogED</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer.cpp">
+      <Filter>Editors\SceneED\Explorer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +90,12 @@
     </Filter>
     <Filter Include="Editors\SceneED">
       <UniqueIdentifier>{4687585e-a6ff-4c65-96a1-0e2aa15e3cf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editors\SceneED\Explorer">
+      <UniqueIdentifier>{9a73c5e5-7068-447b-9f64-f8aaad1c470d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\xECS">
+      <UniqueIdentifier>{99b52a2f-20b6-4a0e-b841-9904681810bd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -276,7 +285,7 @@
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_document_base.h">
       <Filter>Dependencies\xEditor</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_frame_main.h">
+    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_frame.h">
       <Filter>Dependencies\xEditor</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_ui.h">
@@ -336,7 +345,7 @@
     <ClInclude Include="..\..\dependencies\xEditor\dependencies\xGPU\Tools\xgpu_xcore_bitmap_helpers.h">
       <Filter>Dependencies\xEditor\xGPU\Tools</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_frame_base.h">
+    <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_panel.h">
       <Filter>Dependencies\xEditor</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_command_inline.h">
@@ -348,10 +357,10 @@
     <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_document_main_inline.h">
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_frame_main_inline.h">
+    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_frame_inline.h">
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_frame_base_inline.h">
+    <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_panel_inline.h">
       <Filter>Dependencies\xEditor\Details</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dependencies\xEditor\Src\Details\xeditor_ui_inline.h">
@@ -364,8 +373,71 @@
     <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_document.h">
       <Filter>Editors\LogED</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_frame.h">
+    <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_panel.h">
       <Filter>Editors\LogED</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer.h">
+      <Filter>Editors\SceneED\Explorer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer_document.h">
+      <Filter>Editors\SceneED\Explorer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer_frame.h">
+      <Filter>Editors\SceneED\Explorer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer_magic_folders.h">
+      <Filter>Editors\SceneED\Explorer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_archetype.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_archetype_mgr.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_component.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_component_mgr.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_event.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_event_mgr.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_game_mgr.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_pool.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_query.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_query_iterator.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_settings.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_system.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_system_mgr.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_tools.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dependencies\xECS\src\xecs_tools_bits.h">
+      <Filter>Dependencies\xECS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\SceneED\xlioned_sceneed.h">
+      <Filter>Editors\SceneED</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

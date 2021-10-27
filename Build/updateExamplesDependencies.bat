@@ -25,6 +25,12 @@ rmdir "../dependencies/xECS" /S /Q
 git clone https://github.com/LIONant-depot/xECS.git "../dependencies/xECS"
 if %ERRORLEVEL% GEQ 1 goto :ERROR
 
+cd ../dependencies/xECS
+if %ERRORLEVEL% GEQ 1 goto :ERROR
+
+git checkout Lesson07_LiveCoding
+if %ERRORLEVEL% GEQ 1 goto :ERROR
+
 rem ------------------------------------------------------------
 rem XGPU
 rem ------------------------------------------------------------
