@@ -7,6 +7,14 @@ namespace xlioned::sceneed::explorer
     public:
 
                                                         document        ( xcore::string::constant<char> Str, xeditor::document::main& MainDoc )                         noexcept;
+        virtual       const xeditor::document::type&    getType             ( void )                                                        const   noexcept override;
+
+        virtual                 xcore::err              onSave(void)                                                                override{ return {}; }
+        virtual                 xcore::err              onLoad(void)                                                                override { return {}; }
+        virtual                 xcore::err              onNew(void)                                                                override { return {}; }
+        virtual                 xcore::err              onClose(void)                                                                override { return {}; }
+
+#if 0
         xforceinline            bool                    isSceneValid    ( void )                                                                                const   noexcept { return m_SceneGuid.m_gRC.m_Value != 0; }
         virtual                 const type&             getType         ( void )                                                                                const   noexcept override;
         xforceinline            auto                    getSceneFullGuid( void )                                                                                const   noexcept { return m_SceneGuid; }
@@ -76,6 +84,7 @@ namespace xlioned::sceneed::explorer
         x_message::event<xproperty_v2::base&>::delegate         m_deletegateChangeHappen { this, & document::msgChangeHappen };
         x_message::event_rtn<xrcguid_full>::delegate            m_deletegateAssetEdit{ this, &document::msgAssetEdit };
         bool                                                    m_bChanged{ false };
-        */
+#endif
+
     };
 }

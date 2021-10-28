@@ -64,8 +64,8 @@ int main()
     auto Editor = std::make_unique<editor>();
     if( auto Err = Editor->Init(); Err ) return Err;
 
-    if( auto Err = Editor->m_MainFrame->CreateTab( "Log" ); Err ) 
-        return -1;
+    if( auto Err = Editor->m_MainFrame->CreateTab( "Log" ); Err ) return -1;
+    if (auto Err = Editor->m_MainFrame->CreateTab("Scene"); Err) return -1;
 
     //
     // Main loop

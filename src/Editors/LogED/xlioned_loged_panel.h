@@ -1,13 +1,13 @@
 namespace xlioned::loged
 {
-    class panel : public xeditor::panel::base
+    class panel : public xeditor::panel::parent
     {
-        xcore_rtti(panel, xeditor::panel::base);
+        xcore_rtti(panel, xeditor::panel::parent);
         constexpr static auto class_name_v = xcore::string::constant("" ICON_FA_TASKS " Log");
     
     public:
 
-                                                        panel           ( xcore::string::constant<char> Str, xeditor::panel::instance_guid Guid, xeditor::frame& EditorFrame );
+                                                        panel           ( construct& Construct );
 
     protected:
 
@@ -21,7 +21,6 @@ namespace xlioned::loged
     protected:
 
                         void                            msgHandleLog    ( xcore::cstring& Str );
-        virtual         const xeditor::panel::type&     getType         ( void ) override;
         virtual         void                            onRender        ( void ) override;
 
     protected:

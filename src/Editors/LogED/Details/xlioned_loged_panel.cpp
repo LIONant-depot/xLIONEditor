@@ -2,21 +2,14 @@ namespace xlioned::loged {
 
 static const xeditor::panel::details::type_harness<panel> s_Type
 { panel::class_name_v
-, xeditor::panel::type::flags{ .m_bDisplayOnEmptyProject = true }
+, xeditor::panel::type::flags{ .m_bDisplayOnEmptyProject = true, .m_bDisableChildDocking = true }
 };    
 
 //-------------------------------------------------------------------------------------------
 
-const xeditor::panel::type& panel::getType( void )
-{ 
-    return s_Type;  
-}
-
-//-------------------------------------------------------------------------------------------
-
-panel::panel( xcore::string::constant<char> Str, xeditor::panel::instance_guid Guid, xeditor::frame& MainFrame )
-    : xeditor::panel::base{ Str, Guid, MainFrame }
-    , m_LogDoc{ MainFrame.getMainDoc().getSubDocument<document>() }
+panel::panel( construct& Construct )
+    : xeditor::panel::parent{ Construct }
+    , m_LogDoc{ Construct.m_EditorFrame.getMainDoc().getSubDocument<document>() }
 {
 }
 

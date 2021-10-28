@@ -56,6 +56,21 @@
     <ClCompile Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer.cpp">
       <Filter>Editors\SceneED\Explorer</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Editors\SceneED\xlioned_sceneed.cpp">
+      <Filter>Editors\SceneED</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Editors\SceneED\Explorer\Details\xlioned_sceneed_explorer_document.cpp">
+      <Filter>Editors\SceneED\Explorer\Details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Editors\SceneED\Explorer\Details\xlioned_sceneed_explorer_panel.cpp">
+      <Filter>Editors\SceneED\Explorer\Details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Editors\SceneED\Details\xlioned_sceneed_document.cpp">
+      <Filter>Editors\SceneED\Details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Editors\SceneED\Details\xlioned_sceneed_panel.cpp">
+      <Filter>Editors\SceneED\Details</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Settings">
@@ -96,6 +111,12 @@
     </Filter>
     <Filter Include="Dependencies\xECS">
       <UniqueIdentifier>{99b52a2f-20b6-4a0e-b841-9904681810bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editors\SceneED\Details">
+      <UniqueIdentifier>{70321a01-2273-4d94-a0c2-46a7fa3673e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editors\SceneED\Explorer\Details">
+      <UniqueIdentifier>{cbe9fae1-cb30-47ec-a654-853939bb239d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -382,7 +403,7 @@
     <ClInclude Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer_document.h">
       <Filter>Editors\SceneED\Explorer</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer_frame.h">
+    <ClInclude Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer_panel.h">
       <Filter>Editors\SceneED\Explorer</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Editors\SceneED\Explorer\xlioned_sceneed_explorer_magic_folders.h">
@@ -437,6 +458,12 @@
       <Filter>Dependencies\xECS</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Editors\SceneED\xlioned_sceneed.h">
+      <Filter>Editors\SceneED</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\SceneED\xlioned_sceneed_document.h">
+      <Filter>Editors\SceneED</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\SceneED\xlioned_sceneed_panel.h">
       <Filter>Editors\SceneED</Filter>
     </ClInclude>
   </ItemGroup>

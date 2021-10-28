@@ -4,8 +4,8 @@
 
 #include "../../dependencies/xeditor/Src/xeditor.h"
 
-#include "xlioned_sceneed_explorer_magic_folders.h"
+//#include "xlioned_sceneed_explorer_magic_folders.h"
 #include "xlioned_sceneed_explorer_document.h"
-#include "xlioned_sceneed_explorer_frame.h"
+#include "xlioned_sceneed_explorer_panel.h"
 
 #endif
