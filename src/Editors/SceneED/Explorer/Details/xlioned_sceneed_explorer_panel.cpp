@@ -1,10 +1,6 @@
 
 namespace xlioned::sceneed::explorer {
 
-xeditor::panel::details::type_harness<xlioned::sceneed::explorer::panel> panel::s_Type
-{ panel::class_name_v
-};
-
 //-------------------------------------------------------------------------
 
 panel::panel(construct& Construct )
