@@ -1,9 +1,10 @@
 
 #include "Explorer/xlioned_sceneed_explorer.h"
+#include "Properties/xlioned_sceneed_properties.h"
 
 namespace xlioned::sceneed {
 
-    xeditor::panel::details::type_harness<panel, explorer::panel> s_Type{ panel::class_name_v };
+    xeditor::panel::details::type_harness<panel, explorer::panel, properties::panel> s_Type{ panel::class_name_v };
 
     //-------------------------------------------------------------------------
 
@@ -18,6 +19,7 @@ namespace xlioned::sceneed {
     void panel::onCreateChildrenPanels(void)
     {
         (void)parent::CreateTab( "Explorer" );
+        (void)parent::CreateTab("Properties");
     }
 
     //-------------------------------------------------------------------------

@@ -71,6 +71,12 @@
     <ClCompile Include="..\..\src\Editors\SceneED\Details\xlioned_sceneed_panel.cpp">
       <Filter>Editors\SceneED\Details</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Editors\SceneED\Properties\xlioned_sceneed_properties.cpp">
+      <Filter>Editors\SceneED\Properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Editors\ProjectED\xlioned_project.cpp">
+      <Filter>Editors\ProjectED</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Settings">
@@ -117,6 +123,12 @@
     </Filter>
     <Filter Include="Editors\SceneED\Explorer\Details">
       <UniqueIdentifier>{cbe9fae1-cb30-47ec-a654-853939bb239d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editors\SceneED\Properties">
+      <UniqueIdentifier>{94f57129-da97-4b6d-8986-c9870107cb23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editors\ProjectED">
+      <UniqueIdentifier>{28e1c672-dbbc-4d5c-9c6b-81041f8b10db}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -465,6 +477,24 @@
     </ClInclude>
     <ClInclude Include="..\..\src\Editors\SceneED\xlioned_sceneed_panel.h">
       <Filter>Editors\SceneED</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\SceneED\Properties\xlioned_sceneed_properties.h">
+      <Filter>Editors\SceneED\Properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\SceneED\Properties\xlioned_sceneed_properties_document.h">
+      <Filter>Editors\SceneED\Properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\SceneED\Properties\xlioned_sceneed_properties_panel.h">
+      <Filter>Editors\SceneED\Properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\ProjectED\xlioned_project.h">
+      <Filter>Editors\ProjectED</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\ProjectED\xlioned_project_document.h">
+      <Filter>Editors\ProjectED</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\ProjectED\xlioned_project_panel.h">
+      <Filter>Editors\ProjectED</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

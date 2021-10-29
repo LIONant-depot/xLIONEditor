@@ -6,9 +6,8 @@
 // In your search path make sure you point to your own version.
 //==================================================================================
 
-
 // Define this when we want to activate the profiler
-#define XCORE_USER_SETTINGS_PROFILE
+//#define XCORE_USER_SETTINGS_PROFILE
 
 // Define this when we want to activate asserts.
 // Asserts are always turn on in debug by default
