@@ -77,6 +77,9 @@
     <ClCompile Include="..\..\src\Editors\ProjectED\xlioned_project.cpp">
       <Filter>Editors\ProjectED</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Editors\AIED\xlioned_ai.cpp">
+      <Filter>Editors\A.I.ED</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Settings">
@@ -129,6 +132,12 @@
     </Filter>
     <Filter Include="Editors\ProjectED">
       <UniqueIdentifier>{28e1c672-dbbc-4d5c-9c6b-81041f8b10db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editors\A.I.ED">
+      <UniqueIdentifier>{89795110-8bfd-4a3a-8eef-d1e0ebce9fe1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editors\ResourceED">
+      <UniqueIdentifier>{892deeb5-64af-4c63-9b57-feb3ed42173a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -495,6 +504,15 @@
     </ClInclude>
     <ClInclude Include="..\..\src\Editors\ProjectED\xlioned_project_panel.h">
       <Filter>Editors\ProjectED</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\AIED\xlioned_ai.h">
+      <Filter>Editors\A.I.ED</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\AIED\xlioned_ai_document.h">
+      <Filter>Editors\A.I.ED</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Editors\AIED\xlioned_ai_panel.h">
+      <Filter>Editors\A.I.ED</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

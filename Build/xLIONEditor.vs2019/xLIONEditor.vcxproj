@@ -121,6 +121,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\dependencies\xEditor\Src\xeditor.cpp" />
+    <ClCompile Include="..\..\src\Editors\AIED\xlioned_ai.cpp" />
     <ClCompile Include="..\..\src\Editors\LogED\xlioned_loged.cpp" />
     <ClCompile Include="..\..\src\Editors\ProjectED\xlioned_project.cpp" />
     <ClCompile Include="..\..\src\Editors\SceneED\Details\xlioned_sceneed_document.cpp">
@@ -266,6 +267,9 @@
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_frame.h" />
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_panel.h" />
     <ClInclude Include="..\..\dependencies\xEditor\Src\xeditor_ui.h" />
+    <ClInclude Include="..\..\src\Editors\AIED\xlioned_ai.h" />
+    <ClInclude Include="..\..\src\Editors\AIED\xlioned_ai_document.h" />
+    <ClInclude Include="..\..\src\Editors\AIED\xlioned_ai_panel.h" />
     <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged.h" />
     <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_document.h" />
     <ClInclude Include="..\..\src\Editors\LogED\xlioned_loged_panel.h" />

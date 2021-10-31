@@ -29,9 +29,11 @@ namespace xlioned::sceneed {
         ImGui::PushStyleVar(ImGuiStyleVar_ChildRounding, 6.0f);
         ImGui::SetNextWindowBgAlpha(0.35f); // Transparent background
         SetNextWindowPosRelativeToCenterDock(position_type::TOP_MIDDLE, { 0,2 });
-        ImGui::BeginChild( "Menu", {25*4, 35}, true, ImGuiWindowFlags_NoScrollbar );
-     //   ImGui::SetCursorPosX(ImGui::GetCursorPosX() + (float)5);
-     //   ImGui::SetCursorPosY(ImGui::GetCursorPosY() + (float)3);
+
+        float h =      ImGui::GetFontSize() + ImGui::GetStyle().FramePadding.y * 2.0f  + ImGui::GetStyle().WindowPadding.y * 2.0f;
+        float x = 4 * (ImGui::GetFontSize() + ImGui::GetStyle().FramePadding.x * 2.0f) + ImGui::GetStyle().WindowPadding.x * 2.0f;
+        ImGui::BeginChild( "Menu", { x, h }, true, ImGuiWindowFlags_NoScrollbar );
+
         ImGui::Button("X");
 
         ImGui::SameLine();
