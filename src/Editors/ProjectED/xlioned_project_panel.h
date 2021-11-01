@@ -14,14 +14,16 @@ namespace xlioned::project
         virtual         void                        onRender                ( void ) override;
         virtual         void                        onCreateChildrenPanels  ( void ) override;
 
-        void SettingsDependencies(void);
-        void SettingsGeneral();
-        void SettingsPlugins();
-        void SettingsEnviroment();
-        void SettingsAI();
+        void SettingsDependencies( bool bFirstTime );
+        void SettingsGeneral(bool bFirstTime);
+        void SettingsPlugins(bool bFirstTime);
+        void SettingsEnviroment(bool bFirstTime);
+        void SettingsAI(bool bFirstTime);
 
     protected:
 
-        document&                           m_LogDoc;
+        document&                           m_ProjectDoc;
+        property::inspector                 m_Inspector;
+        int                                 m_SelectedMenu = -1;
     };
 }

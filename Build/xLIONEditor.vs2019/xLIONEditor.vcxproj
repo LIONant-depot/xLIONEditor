@@ -123,6 +123,14 @@
     <ClCompile Include="..\..\dependencies\xEditor\Src\xeditor.cpp" />
     <ClCompile Include="..\..\src\Editors\AIED\xlioned_ai.cpp" />
     <ClCompile Include="..\..\src\Editors\LogED\xlioned_loged.cpp" />
+    <ClCompile Include="..\..\src\Editors\ProjectED\Details\xlioned_project_document.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Editors\ProjectED\Details\xlioned_project_panel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\src\Editors\ProjectED\xlioned_project.cpp" />
     <ClCompile Include="..\..\src\Editors\SceneED\Details\xlioned_sceneed_document.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>

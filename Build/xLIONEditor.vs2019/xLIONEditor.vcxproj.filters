@@ -80,6 +80,12 @@
     <ClCompile Include="..\..\src\Editors\AIED\xlioned_ai.cpp">
       <Filter>Editors\A.I.ED</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Editors\ProjectED\Details\xlioned_project_document.cpp">
+      <Filter>Editors\ProjectED\Details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Editors\ProjectED\Details\xlioned_project_panel.cpp">
+      <Filter>Editors\ProjectED\Details</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Settings">
@@ -138,6 +144,9 @@
     </Filter>
     <Filter Include="Editors\ResourceED">
       <UniqueIdentifier>{892deeb5-64af-4c63-9b57-feb3ed42173a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editors\ProjectED\Details">
+      <UniqueIdentifier>{2c08dd97-7df1-4ea7-bdff-f18e74dd4766}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -7,7 +7,8 @@ namespace xlioned::project {
 
     panel::panel( construct& Construct )
         : xeditor::panel::parent(Construct)
-        , m_LogDoc{ Construct.m_EditorFrame.getMainDoc().getSubDocument<document>() }
+        , m_ProjectDoc{ Construct.m_EditorFrame.getMainDoc().getSubDocument<document>() }
+        , m_Inspector("Properties", false)
     {
     }
 
@@ -18,10 +19,18 @@ namespace xlioned::project {
     }
 
     //-------------------------------------------------------------------------
-    void panel::SettingsDependencies( void )
+    void panel::SettingsDependencies(bool bFirstTime)
     {
+        if (bFirstTime)
+        {
+            m_Inspector.clear();
+            m_Inspector.AppendEntity();
+            m_Inspector.AppendEntityComponent(m_Inspector.getPropertyVTable(), &m_Inspector);
+        }
+
         ImGui::Button("Import"); ImGui::SameLine();
-        ImGui::Button("Create");
+        ImGui::Button("Create"); ImGui::SameLine();
+        ImGui::Button("Remove");
         static int selected = 0;
         {
             ImGui::BeginChild("left pane", ImVec2(350, 0), true);
@@ -48,42 +57,68 @@ namespace xlioned::project {
         ImGui::SameLine();
 
         ImGui::BeginGroup();
-        ImGui::Button("Remove");
-        // ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(0, 0));
-        char Buffer[] = "Some path bla bla ";
-        ImGui::Text("Path:");
-        ImGui::InputText("##Project Path", Buffer, sizeof(Buffer), ImGuiInputTextFlags_ReadOnly);
-        ImGui::NewLine();
-
-
-        ImGui::TextWrapped("Project Path: something something ");
+        
+        ImGui::BeginChild("SettingsDependenciesProperties", ImVec2(-1, -1), false);
+        m_Inspector.ShowNoWindow();
+        ImGui::EndChild();
 
         ImGui::EndGroup();
     }
 
-    void panel::SettingsGeneral()
+    void panel::SettingsGeneral(bool bFirstTime)
     {
-        ImGui::Text("Project Path:");
-        char Buffer[] = "Some path bla bla ";
-        ImGui::InputText("##2Project Path", Buffer, sizeof(Buffer), ImGuiInputTextFlags_ReadOnly);
+        if( bFirstTime )
+        {
+            m_Inspector.clear();
+            m_Inspector.AppendEntity();
+            m_Inspector.AppendEntityComponent( xcore::property::getTable(m_ProjectDoc.m_GeneralSettings), &m_ProjectDoc.m_GeneralSettings );
+            m_Inspector.AppendEntityComponent(xcore::property::getTable(m_ProjectDoc.m_SourceControl), &m_ProjectDoc.m_SourceControl);
+        }
+
+        ImGui::BeginChild("SettingsGeneralProperties", ImVec2(-1, -1), false);
+        m_Inspector.ShowNoWindow();
+        ImGui::EndChild();
     }
 
-    void panel::SettingsEnviroment()
+    void panel::SettingsEnviroment(bool bFirstTime)
     {
-        ImGui::Text("Project Path:");
-        char Buffer[] = "Some path bla bla ";
-        ImGui::InputText("##2Project Path", Buffer, sizeof(Buffer), ImGuiInputTextFlags_ReadOnly);
+        if (bFirstTime)
+        {
+            m_Inspector.clear();
+            m_Inspector.AppendEntity();
+            m_Inspector.AppendEntityComponent(xcore::property::getTable(m_ProjectDoc.m_SourceControl), &m_ProjectDoc.m_SourceControl);
+            m_Inspector.AppendEntityComponent(xcore::property::getTable(m_ProjectDoc.m_UserSettings), &m_ProjectDoc.m_UserSettings);
+            m_Inspector.AppendEntityComponent(xcore::property::getTable(m_ProjectDoc.m_EnviromentFolders), &m_ProjectDoc.m_EnviromentFolders);
+        }
+
+        ImGui::BeginChild("SettingsEnviromentProperties", ImVec2(-1, -1), false);
+        m_Inspector.ShowNoWindow();
+        ImGui::EndChild();
     }
 
-    void panel::SettingsAI()
+    void panel::SettingsAI(bool bFirstTime)
     {
-        ImGui::Text("Project Path:");
-        char Buffer[] = "Some path bla bla ";
-        ImGui::InputText("##2Project Path", Buffer, sizeof(Buffer), ImGuiInputTextFlags_ReadOnly);
+        if (bFirstTime)
+        {
+            m_Inspector.clear();
+            m_Inspector.AppendEntity();
+            m_Inspector.AppendEntityComponent(m_Inspector.getPropertyVTable(), &m_Inspector);
+        }
+
+        ImGui::BeginChild("SettingsAIProperties", ImVec2(-1, -1), false);
+        m_Inspector.ShowNoWindow();
+        ImGui::EndChild();
     }
 
-    void panel::SettingsPlugins()
+    void panel::SettingsPlugins(bool bFirstTime)
     {
+        if (bFirstTime)
+        {
+            m_Inspector.clear();
+            m_Inspector.AppendEntity();
+            m_Inspector.AppendEntityComponent(m_Inspector.getPropertyVTable(), &m_Inspector);
+        }
+
         ImGui::Text("Plugins:");
         ImGui::BeginChild("left pane", ImVec2(-1, -1), true);
         if (ImGui::BeginTable("table1", 1, ImGuiTableFlags_RowBg))
@@ -128,8 +163,8 @@ namespace xlioned::project {
                 , std::pair{ "Dependencies", &panel::SettingsDependencies   }
                 , std::pair{ "Plugins",      &panel::SettingsPlugins        }
                 };
-                static int selected = 0;
 
+                const auto PreviousSelected = m_SelectedMenu;
                 ImGui::BeginChild("setting options", ImVec2(300, -1), true);
                 if (ImGui::BeginTable("setting options table", 1, ImGuiTableFlags_RowBg))
                 {
@@ -140,8 +175,8 @@ namespace xlioned::project {
                         {
                             ImGui::TableSetColumnIndex(column);
 
-                            if( ImGui::Selectable( SettingOptions[i].first, selected == i ) )
-                                selected = i;
+                            if( ImGui::Selectable( SettingOptions[i].first, m_SelectedMenu == i ) )
+                                m_SelectedMenu = i;
                         }
                     }
                     ImGui::EndTable();
@@ -149,9 +184,12 @@ namespace xlioned::project {
                 ImGui::EndChild();
                 ImGui::SameLine();
 
+                 
+
                 // Call the right option to display
                 ImGui::BeginGroup();
-                std::invoke(SettingOptions[selected].second, this);
+                if( m_SelectedMenu == -1 ) m_SelectedMenu = 0;
+                std::invoke(SettingOptions[m_SelectedMenu].second, this, PreviousSelected != m_SelectedMenu );
                 ImGui::EndGroup();
 
                 ImGui::EndTabItem();
